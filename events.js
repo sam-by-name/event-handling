@@ -31,7 +31,9 @@ function three () {
 }
 function four () {
   var four = document.getElementById('four')
-  four.addEventListener('mouseclick', makePurple)
+  four.addEventListener('click', makePurple)
+  four.addEventListener('dblclick', makeYellow)
+  four.addEventListener('wheel', makeGreen)
   four.addEventListener('mouseleave', makeWhite)
 }
 
@@ -47,6 +49,9 @@ function makeOrange (evt) {
 }
 function makePurple (evt) {
   evt.target.style.backgroundColor = 'purple'
+}
+function makeYellow (evt) {
+  evt.target.style.backgroundColor = 'yellow'
 }
 function makeWhite (evt) {
   evt.target.style.backgroundColor = 'white'
